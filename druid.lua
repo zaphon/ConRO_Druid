@@ -153,7 +153,7 @@ function ConRO.Druid.Under10(_, timeShift, currentSpell, gcd, tChosen, pvpChosen
 --Conditions
 	local _is_moving 																					= ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee															= ConRO:Targets("Melee");
-	local _target_in_10yrds 																			= CheckInteractDistance("target", 3);
+	local _target_in_10yrds 																			= ConRO:CheckInteractDistance("target", 3);
 
 --Warnings
 
@@ -188,7 +188,7 @@ function ConRO.Druid.Under10Def(_, timeShift, currentSpell, gcd, tChosen, pvpCho
 --Conditions
 	local _is_moving 																					= ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee															= ConRO:Targets("Melee");
-	local _target_in_10yrds 																			= CheckInteractDistance("target", 3);
+	local _target_in_10yrds 																			= ConRO:CheckInteractDistance("target", 3);
 
 --Warnings
 
@@ -479,7 +479,7 @@ function ConRO.Druid.BalanceDef(_, timeShift, currentSpell, gcd, tChosen, pvpCho
 --Conditions
 	local _is_moving 																					= ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee															= ConRO:Targets("Melee");
-	local _target_in_10yrds 																			= CheckInteractDistance("target", 3);
+	local _target_in_10yrds 																			= ConRO:CheckInteractDistance("target", 3);
 
 --Rotations	
 		if _Renewal_RDY and _Player_Percent_Health <= 60 then
@@ -812,7 +812,7 @@ function ConRO.Druid.FeralDef(_, timeShift, currentSpell, gcd, tChosen, pvpChose
 --Conditions
 	local _is_moving = ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee = ConRO:Targets("Melee");
-	local _target_in_10yrds = CheckInteractDistance("target", 3);
+	local _target_in_10yrds = ConRO:CheckInteractDistance("target", 3);
 
 --Rotations	
 		if _Regrowth_RDY and _PredatorySwiftness_BUFF and _Player_Percent_Health <= 95 then
@@ -892,7 +892,7 @@ function ConRO.Druid.Guardian(_, timeShift, currentSpell, gcd, tChosen, pvpChose
 --Conditions
 	local _is_moving = ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee = ConRO:Targets("Melee");
-	local _target_in_10yrds = CheckInteractDistance("target", 3);
+	local _target_in_10yrds = ConRO:CheckInteractDistance("target", 3);
 
 		if _BearForm_FORM then
 			_WildCharge = _WildChargeBF;
@@ -1031,7 +1031,7 @@ function ConRO.Druid.GuardianDef(_, timeShift, currentSpell, gcd, tChosen, pvpCh
 --Conditions
 	local _is_moving 																					= ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee															= ConRO:Targets("Melee");
-	local _target_in_10yrds 																			= CheckInteractDistance("target", 3);
+	local _target_in_10yrds 																			= ConRO:CheckInteractDistance("target", 3);
 
 --Rotations	
 		if _FrenziedRegeneration_RDY and _Player_Percent_Health <= 60 then
@@ -1103,7 +1103,7 @@ function ConRO.Druid.Restoration(_, timeShift, currentSpell, gcd, tChosen, pvpCh
 --Conditions
 	local _is_moving 																					= ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee															= ConRO:Targets("Melee");
-	local _target_in_10yrds 																			= CheckInteractDistance("target", 3);
+	local _target_in_10yrds 																			= ConRO:CheckInteractDistance("target", 3);
 
 		if _EclipseLunar_BUFF and _EclipseSolar_BUFF then
 			last_eclipse_phase = "both";
@@ -1207,7 +1207,7 @@ function ConRO.Druid.RestorationDef(_, timeShift, currentSpell, gcd, tChosen, pv
 --Conditions
 	local _is_moving 																					= ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee															= ConRO:Targets("Melee");
-	local _target_in_10yrds 																			= CheckInteractDistance("target", 3);
+	local _target_in_10yrds 																			= ConRO:CheckInteractDistance("target", 3);
 
 --Rotations	
 		if _Renewal_RDY and _Player_Percent_Health <= 60 then
