@@ -5,6 +5,10 @@ ConRO.Druid.CheckPvPTalents = function()
 end
 local ConRO_Druid, ids = ...;
 
+local GetSpellCount = function(spellID)
+	return C_Spell.GetSpellCastCount(spellID);
+end
+
 function ConRO:EnableRotationModule(mode)
 	mode = mode or 0;
 	self.ModuleOnEnable = ConRO.Druid.CheckTalents;
